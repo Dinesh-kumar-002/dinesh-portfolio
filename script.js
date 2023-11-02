@@ -41,12 +41,7 @@ var dark_text="rgb(0, 57, 74)";
   })
   
   window.addEventListener('scroll',()=>{
-    var dinesh_image=document.querySelector('.dinesh-img');
     var dinesh_glass=document.querySelector('.dinesh-glass');
     var scroll=window.scrollY
-    if(scroll<=25){
-      console.log(scroll);
-      // dinesh_image.style.transform=`translateX(${scroll}%)`
-    }
     dinesh_glass.style.transform=`translateX(-${scroll}%)`
   })

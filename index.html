@@ -20,8 +20,10 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="node_modules/atropos/atropos.min.js"></script>
+    <link rel="stylesheet" href="node_modules/atropos/atropos.min.css" />
     <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/atropos@2/atropos.min.mjs"></script>
+
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -46,39 +48,45 @@
 
       <!-- About me  -->
 
-      <div class="row p-0 m-0 my-5">
-        <div class="col col-12 col-md-6 col-lg-6 col-img">
-          <!-- <img src="assets/nVehicle_logo.png" alt="" class="dinesh-img" />
+      <div class="row p-0 m-0 mb-5">
+        <div class="col col-12 col-md-6 col-lg-6">
+         <div class="profile">
+          <!-- <img src="assets/E1lZrlkVcAMBwPs.jpeg" alt="" class="img2"> -->
+           <img src="assets/PngItem_36926 (2).png" class="img2" alt="">
+          <img src="assets/nVehicle_logo.png" alt="" class="dinesh-img img1" />
           <img
             src="assets/Thuglifeglassespngimage.png"
             alt=""
             class="dinesh-glass"
-          /> -->
-  
-          <div class="atropos my-atropos">
-            <!-- scale container (required) -->
+          />
+         </div>
+
+          <!-- <div class="atropos my-atropos">
             <div class="atropos-scale">
-              <!-- rotate container (required) -->
               <div class="atropos-rotate">
-                <!-- inner container (required) -->
-                <img src="assets/nVehicle_logo.png" alt="" class="dinesh-img" />
                 <div class="atropos-inner">
-                  <!-- put your custom content here -->
+                  <div class="images">
+                    <img src="assets/atopose/basckground.png" alt="" data-atropos-offset="10">
+                  <img src="assets/atopose/moon.png" alt="" data-atropos-offset="8">
+                  <img src="assets/atopose/mopuntain3.png" alt="" data-atropos-offset="5">
+                  <img src="assets/atopose/mountain2.png" alt="" data-atropos-offset="3">
+                  <img src="assets/atopose/mountain1.png" alt="" data-atropos-offset="1">
+                 </div>
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="col col-12 col-md-6 col-lg-6 p-3 p-lg-5">
           <div class="inner-col my-4">
-            <h2 class="text fw-bolder fs-2 hello">Hello👋, I'm</h2>
-            <h1 class="text dinesh">Dinesh Kumar</h1>
-            <h3 class="text">
+            <h2 class="text-center fw-bolder fs-2 hello">Hello👋, I'm</h2>
+            <h1 class="text-center dinesh">Dinesh Kumar</h1>
+            <h3 class="text-center">
               <span class="text creative fw-bolder"
                 >a, Creative and passionate</span
               >
             </h3>
-            <h5 class="fw-bolder my-4">
+            <h5 class="text-center fw-bolder my-4">
               <span id="element2"></span>
             </h5>
 
@@ -113,7 +121,7 @@
               </div>
             </div>
             <!-- social icons  -->
-            <div class="d-flex mt-4">
+            <div class="d-flex mt-4 justify-content-center">
               <a href=""><img src="assets/social/github (1).png" alt="" /></a>
               <a href=""><img src="assets/social/linkedin (1).png" alt="" /></a>
               <a href=""><img src="assets/social/instagram.png" alt="" /></a>
@@ -129,11 +137,16 @@
           </div>
         </div>
       </div>
-
       <!-- experience  -->
+      <div class="heading w-100 d-flex justify-content-evenly align-items-center">
+        <a href="#experience" class="text-decoration-none fw-bolder">Experience</a>
+        <a href="#skills" class="text-decoration-none fw-bolder">Skills</a>
+        <a href="#projects" class="text-decoration-none fw-bolder">projects</a>
+        <a href="#education" class="text-decoration-none fw-bolder">Education</a>
+        <a href="#contact" class="text-decoration-none fw-bolder">Contact</a>
+      </div>
     </div>
 
-   
     <script>
       const myAtropos = Atropos({
         el: ".my-atropos",
