@@ -11,13 +11,18 @@ $dark-text:rgb(0, 57, 74);
     margin: 0;
     box-sizing: border-box;   
 }
+html{
+
+    cursor: url("assets/24729-7-cursor-arrow-file.png") 32 32 ,auto;
+}
 body{
-    cursor: url("assets/24729-7-cursor-arrow-file.png"),auto;
     background-color: $dark-background;
     color: $light-text;
     font-family: nunito;
 }
+
 // floating buttons
+
 .comment{
     position: fixed;
     bottom: 20px;
