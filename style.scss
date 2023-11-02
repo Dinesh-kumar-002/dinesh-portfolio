@@ -12,14 +12,16 @@ $dark-text:rgb(0, 57, 74);
     box-sizing: border-box;   
 }
 
-html{
-
-    cursor: url("assets/24729-7-cursor-arrow-file.png") 32 32 ,auto;
-}
 body{
     background-color: $dark-background;
     color: $light-text;
     font-family: nunito;
+    a{
+        color: $light-text;
+    }
+    .border{
+        border-color: $light-text;
+    }
 }
 
 // floating buttons
@@ -43,7 +45,6 @@ body{
 .fa-lightbulb,.fa-code:not(.code)
 {
     font-size: 30px;
-    // rotate: 180deg;
 }
 
 .dinesh-glass{
@@ -53,31 +54,44 @@ body{
     height: 25rem;
     padding: 30px;
 }
-.nav{
+.about{
+    background-color: rgb(0, 108, 132);
+    padding: 10px;
+}
+.whole-nav{
+    display: none;
     background-color: rgb(0, 108, 132);
     position: sticky;
     top: 0;
     z-index: 10;
-    // box-shadow: 2px 2px 40px black;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
 }
+
 .col{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+.row1{
+    height: 96vh;
+    background-image: url("assets/wp level2.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
 .profile{
     height: 450px;
     width: 100%;
     position: relative;
     overflow: hidden;
     .img2{
-        // height: 100%;
-        width: 100%;
+        width: 350px;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
+        top: 20%;
+        left: 10%;
+        // transform: translate(-50%,-50%);
+        transform: skew(12deg,5deg);
         
     }
     .img1{
@@ -86,12 +100,11 @@ body{
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
+        // transform: skew(12deg,5deg);
     }
     
 }
-
-a{  
-    color: $light-text;
+a{ 
     img{
         height: 35px;
         width: 35px;
@@ -135,9 +148,7 @@ a{
     margin: 8px 1px;
   }
   
-.intro{
-    box-shadow: -1px 1px 2px black;
-}
+
 .cursor-image{
     display: none;
 }
@@ -164,11 +175,6 @@ a{
 //  }
 
 // heading 
-.heading{
-    a{
-        font-size: 17px;
-    }
-}
 
 
 
@@ -192,7 +198,7 @@ a{
         }
     }
     .cursor-image{
-        display: block;
+        // display: block;
         width: 30px;
         height: 30px;
         background-color: rgba(255, 255, 255, 0.224);
@@ -204,6 +210,12 @@ a{
         z-index: 20;
         transition-timing-function: ease-in-out;
         transition: 10ms;
+    }
+    .profile .img2{
+        width: 350px;
+        position: absolute;
+        top: 20%;
+        left: 20%;
     }
 }
 @media (min-width: 420px) and (max-width: 450px) {
