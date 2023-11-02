@@ -1,3 +1,13 @@
+// custom cursor 
+
+var cursor=document.querySelector(".cursor-image");
+window.addEventListener('mousemove', (e)=>{
+  var x=e.pageX;
+  var y=e.pageY;
+  cursor.style.top=`${y+25}px`;
+  cursor.style.left=`${x+10}px`;
+})
+
 var typed = new Typed('#element2', {
     strings: ['<span class="text-success">FRONT-END WEB DEVELOPER</span>','<span class="text-danger">WEB DEVELOPER</span>','<span></span>'],
     typeSpeed: 100,

@@ -68,6 +68,7 @@ body {
 
 a {
   color: rgb(207, 248, 255);
+  cursor: pointer;
 }
 a img {
   height: 35px;
@@ -132,9 +133,27 @@ a .mail {
   box-shadow: -1px 1px 2px black;
 }
 
+.cursor-image {
+  display: none;
+}
+
 @media only screen and (min-width: 720px) {
   .dinesh {
     font-size: 4vw;
+  }
+  .cursor-image {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.224);
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    z-index: 20;
+    transition-timing-function: ease-in-out;
+    transition: 200ms;
   }
 }
 @media (min-width: 420px) and (max-width: 450px) {

@@ -21,6 +21,7 @@
     ></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/atropos@2/atropos.min.mjs"></script>
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -28,6 +29,11 @@
     <a href=" https://wa.me/7448741492">
       <img src="assets/social/chat.png" alt="" class="comment" />
     </a>
+    <!-- cursor custom  -->
+    <div class="cursor-image">
+      <!-- <img src="assets/24729-7-cursor-arrow-file.png" alt=""> -->
+    </div>
+
     <div class="portfolio">
       <!-- navigation -->
       <div class="nav d-flex justify-content-between p-3 align-items-center">
@@ -42,12 +48,26 @@
 
       <div class="row p-0 m-0 my-5">
         <div class="col col-12 col-md-6 col-lg-6 col-img">
-          <img src="assets/nVehicle_logo.png" alt="" class="dinesh-img" />
+          <!-- <img src="assets/nVehicle_logo.png" alt="" class="dinesh-img" />
           <img
             src="assets/Thuglifeglassespngimage.png"
             alt=""
             class="dinesh-glass"
-          />
+          /> -->
+  
+          <div class="atropos my-atropos">
+            <!-- scale container (required) -->
+            <div class="atropos-scale">
+              <!-- rotate container (required) -->
+              <div class="atropos-rotate">
+                <!-- inner container (required) -->
+                <img src="assets/nVehicle_logo.png" alt="" class="dinesh-img" />
+                <div class="atropos-inner">
+                  <!-- put your custom content here -->
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="col col-12 col-md-6 col-lg-6 p-3 p-lg-5">
           <div class="inner-col my-4">
@@ -112,5 +132,13 @@
 
       <!-- experience  -->
     </div>
+
+   
+    <script>
+      const myAtropos = Atropos({
+        el: ".my-atropos",
+        // rest of parameters
+      });
+    </script>
   </body>
 </html>
