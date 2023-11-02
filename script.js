@@ -1,5 +1,6 @@
 // custom cursor 
 
+
 var cursor=document.querySelector(".cursor-image");
 window.addEventListener('mousemove', (e)=>{
   var x=e.pageX;
@@ -34,8 +35,7 @@ var dark_text="rgb(0, 57, 74)";
     else if(i.getAttribute("class").includes("fa-solid")){
       i.setAttribute("class"," fa-lightbulb fa-regular")     
       console.log(i.getAttribute("class"));
-var dark_background="rgb(25, 25, 25)";
-body.style.backgroundColor=dark_background;
+      body.style.backgroundColor=dark_background;
       body.style.color=light_text;
     }
   })
