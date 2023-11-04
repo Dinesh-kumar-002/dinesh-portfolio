@@ -18,6 +18,19 @@ body .border {
   border-color: rgb(207, 248, 255);
 }
 
+.hello, .creative {
+  color: rgb(207, 248, 255);
+}
+
+.download {
+  background-color: rgb(0, 142, 174);
+  color: rgb(207, 248, 255) !important;
+}
+
+.download:hover {
+  color: rgb(0, 67, 88) !important;
+}
+
 .comment {
   position: fixed;
   bottom: 20px;
@@ -28,7 +41,7 @@ body .border {
 }
 
 .dinesh {
-  background-image: linear-gradient(to bottom, rgb(0, 117, 201), rgb(5, 148, 129));
+  background-image: linear-gradient(to bottom, rgb(112, 195, 255), rgb(112, 255, 236));
   -webkit-background-clip: text;
   color: transparent;
   font-weight: 1000;
@@ -48,14 +61,14 @@ body .border {
   padding: 30px;
 }
 
-.about {
-  background-color: rgb(0, 108, 132);
+.about-title, .experience-title, .skills-title {
+  background-color: rgb(0, 142, 174);
   padding: 10px;
 }
 
 .whole-nav {
   display: none;
-  background-color: rgb(0, 108, 132);
+  background-color: rgb(0, 142, 174);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -70,9 +83,10 @@ body .border {
 }
 
 .row1 {
-  height: 96vh;
+  height: 100vh;
   background-image: url("assets/wp level2.png");
-  background-size: cover;
+  background-size: 100 200;
+  background-position: bottom right;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
@@ -161,8 +175,47 @@ a .mail {
   display: none;
 }
 
+.animate {
+  width: 100%;
+  height: 350px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.my-atropos {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.images {
+  position: relative;
+  width: 105%;
+  box-shadow: 5px 5px 15px rgb(214, 170, 255);
+  border-radius: 20px;
+}
+
+.atropos-inner {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.images > img {
+  border-radius: 20px;
+  width: 110%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 @media only screen and (min-width: 720px) {
   .dinesh {
+    background-image: linear-gradient(to bottom, rgb(112, 195, 255), rgb(112, 255, 236));
     font-size: 4vw;
   }
   .heading a {
@@ -186,6 +239,11 @@ a .mail {
     position: absolute;
     top: 20%;
     left: 20%;
+  }
+  .animate {
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
   }
 }
 @media (min-width: 420px) and (max-width: 450px) {
