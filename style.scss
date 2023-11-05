@@ -3,8 +3,8 @@
 $dark-background:rgb(0, 21, 27);
 $light-text:rgb(207, 248, 255);
 $light-background:rgb(217, 245, 255);
-$dark-text:rgb(0, 67, 88);
-$default:rgb(0, 142, 174);
+$dark-text:rgb(0, 85, 111);
+$default:rgb(0, 0, 0);
 
 
 *{  
@@ -27,6 +27,7 @@ body{
 .hello, .creative{
     color: rgb(207, 248, 255);
 }
+
 .download{
      background-color:$default;
      color: $light-text !important;
@@ -180,8 +181,8 @@ a{
 }
 .images{
     position: relative;
-    width: 105%;
-    box-shadow: 5px 5px 15px rgb(214, 170, 255);
+    width: 105%;    box-shadow: 5px 5px 15px rgb(214, 170, 255);
+    height: 100%;
     border-radius: 20px;
 }
 .atropos-inner{
@@ -197,8 +198,13 @@ a{
     top: 0;
     left: 0;
 }
-
-// heading 
+.heading a{
+    box-shadow: -1px 1px 3px black;
+}
+ .heading a:hover{
+    background-color: $light-background;
+    color: $dark-text;
+ }
 
 
 
@@ -242,10 +248,10 @@ a{
         top: 20%;
         left: 20%;
     }
-    .animate{
-        width: 100%;
-        height: 400px;
-        border-radius: 20px;
+    
+        .animate{
+            width: 100%;
+            height: 350px !important;
     }
 }
 @media (min-width: 420px) and (max-width: 450px) {

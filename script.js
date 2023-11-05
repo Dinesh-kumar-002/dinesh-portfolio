@@ -20,7 +20,7 @@ var typed = new Typed('#element2', {
 var dark_background="rgb(0, 21, 27)";
 var light_text="rgb(207, 248, 255)";
 var light_background="rgb(217, 245, 255)";
-var dark_text="rgb(0, 67, 88)";
+var dark_text="rgb(0, 85, 111)";
 
   const body=document.querySelector('body');
   const whole_nav=document.querySelector('.whole-nav');
