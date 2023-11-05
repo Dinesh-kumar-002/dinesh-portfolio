@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Playpen+Sans:wght@100;200;300;400&display=swap');
 @import url('https://github.com/nolimits4web/atropos/blob/master/src/atropos.scss');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Playpen+Sans:wght@100;200;300;400&display=swap');
+
 $dark-background:rgb(0, 21, 27);
 $light-text:rgb(207, 248, 255);
-$light-background:rgb(217, 245, 255);
-$dark-text:rgb(0, 85, 111);
-$default:rgb(0, 0, 0);
+$light-background:rgb(0, 133, 182);
+$dark-text:rgb(0, 60, 78);
+$default:rgb(0, 4, 5);
+$anchgor-text:rgb(0, 106, 138);
 
 
 *{  
@@ -66,7 +69,7 @@ body{
     height: 25rem;
     padding: 30px;
 }
-.about-title,.experience-title,.skills-title{
+.about-title,.experience-title,.skills-title,.projects-title,.education-title,.contact-title{
     background-color: $default;
     padding: 10px;
 }
@@ -111,28 +114,29 @@ body{
         height: 450px;
         position: absolute;
         top: 50%;
-        left: 50%;
+        left: 65%;
         transform: translate(-50%,-50%);
-        // transform: skew(12deg,5deg);
     }
     
 }
-a{ 
-    img{
-        height: 35px;
-        width: 35px;
-        margin: 0 6px;
-    }
-    img:hover{
-        transform: scale(1.2);
-        transition-duration: 100ms;
-        transition-timing-function: ease-in-out;
-        
-    }
-    .mail{
-        background-color: white;
-        border-radius: 8px;
-        padding: 4px;
+.social{
+    a{ 
+        img{
+            height: 35px;
+            width: 35px;
+            margin: 0 6px;
+        }
+        img:hover{
+            transform: scale(1.2);
+            transition-duration: 100ms;
+            transition-timing-function: ease-in-out;
+            
+        }
+        .mail{
+            background-color: white;
+            border-radius: 8px;
+            padding: 4px;
+        }
     }
 }
 @for $i from 1 through 3 {
@@ -164,6 +168,10 @@ a{
 
 .cursor-image{
     display: none;
+}
+.about{
+    border:  -4px 4px 10px solid rgb(255, 255, 255) !important;
+    // box-shadow: -4px 4px 10px rgb(77, 77, 77);
 }
 .animate{
     width: 100%;
@@ -217,22 +225,45 @@ a{
     }
 }
 .pro{
-    .col-12{
-        padding: 0;
-        margin: 0;
-    }
     .project{
-        border: 2px solid $light-background;
+        box-shadow: -4px 4px 12px rgb(65, 65, 65);
         border-radius: 10px;
-        padding: 10px;
+        padding: 15px;
     }
+    
     .project:hover{
         transform: scale(1.1);
         transition-timing-function: ease-in-out;
         transform-origin: center;
-        transition-duration: 200ms;
-        
+        transition-duration: 500ms;
     }
+    .desc{
+        color: $anchgor-text;
+        overflow: hidden;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+    }
+    .name{
+        overflow: hidden;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+
+    }
+}
+.portfolio-text{
+    position: absolute;
+    font-family: 'Josefin Sans', sans-serif;
+    writing-mode: vertical-lr;
+    font-size: 120px;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    transform: rotate(180deg);
+    transform-origin: center;
+    font-weight: 900;
+    color: antiquewhite;
 }
 
 
@@ -245,11 +276,31 @@ a{
 
 
 
-
 @media only screen and (min-width:720px){
+    
+    .portfolio-text{
+        position: absolute;
+        font-family: 'Josefin Sans', sans-serif;
+        writing-mode: vertical-lr;
+        font-size: 160px;
+        opacity: 0.2;
+        top: 0;
+        left: 0;
+        transform: rotate(180deg);
+        transform-origin: center;
+        font-weight: 900;
+    }
+    
     .profile{
         height: 100%;
         width: 100%;
+        .img1{
+            height: 750px !important;
+            position: absolute;
+            top: 50%;
+            left: 60%;
+            transform: translate(-50%,-50%);
+        }
     }
     .dinesh-img{
         height: 600px !important;
@@ -299,7 +350,7 @@ a{
         position: absolute;
         height: 50px;
         top: 26%;
-        left: 26%;
+        left: 40.2%;
         rotate: 1.5deg;
     }
     

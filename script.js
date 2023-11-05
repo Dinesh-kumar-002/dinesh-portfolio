@@ -24,7 +24,7 @@ var typed = new Typed("#element2", {
 var dark_background = "rgb(0, 21, 27)";
 var light_text = "rgb(207, 248, 255)";
 var light_background = "rgb(217, 245, 255)";
-var dark_text = "rgb(0, 85, 111)";
+var dark_text = "rgb(0, 60, 78)";
 
 const body = document.querySelector("body");
 const whole_nav = document.querySelector(".whole-nav");
@@ -85,15 +85,16 @@ fetch(file)
   function display(elem){
     projects.innerHTML+=
     `
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-    <div class="project m-2">
-    <a href="${elem.link}">
-      <div class="project_image">
-      <img src="assets/${elem.image}" alt="" class="w-100 h-100" />
+    <div class="col-project col-6 col-sm-6 col-md-4 col-lg-3 p-0">
+    <div class="project m-3">
+    <div class="project_image">
+    <a href="${elem.link}" class="text-decoration-none">
+      <img src="assets/${elem.image}" alt="" class="w-100" h-100/>
+      </a>
       </div>
-      <div class="project_details">
-        <h3 class="text my-3">${elem.name}</h3>
-        <h5 class="text">${elem.desc}</h5>
+      <div class="project_details ">
+        <h3 class="text text-decoration-none my-2 name">${elem.name}</h3>
+        <p class="text text-decoration-none desc">${elem.desc}</p>
       </div>
     </div>
   </div>
