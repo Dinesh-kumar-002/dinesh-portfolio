@@ -1,3 +1,5 @@
+
+
 // custom cursor
 
 var cursor = document.querySelector(".cursor-image");
@@ -19,6 +21,16 @@ var typed = new Typed("#element2", {
   loop: true,
   backSpeed: 10,
   cursorChar: " ✍️",
+});
+
+var typed = new Typed("#element1", {
+  strings: [
+   '.....'
+  ],
+  typeSpeed: 500,
+  loop: true,
+  backSpeed: 500,
+  cursorChar: "",
 });
 
 var dark_background = "rgb(0, 21, 27)";
@@ -61,7 +73,6 @@ bulb.addEventListener("click", function () {
 window.addEventListener("scroll", () => {
   var dinesh_glass = document.querySelector(".dinesh-glass");
   var scroll = window.scrollY;
-  // console.log(scroll);
   if (scroll > 100) {
     whole_nav.style.display = "block";
   } else {
@@ -70,33 +81,60 @@ window.addEventListener("scroll", () => {
   dinesh_glass.style.transform = `translateX(-${scroll}%)`;
 });
 
-var projects = document.querySelector(".pro");
 
-var file ="https://raw.githubusercontent.com/Dinesh-kumar-002/showcase/main/script.json";
-fetch(file)
-  .then((res) => {
-    return res.json();
-  })
-  .then((data) => {
-    data.forEach(element => {
-      display(element);
+var projects = document.querySelector(".pro");
+var categories = document.querySelector('.categories');
+var selective = categories.querySelectorAll("button");
+
+selective.forEach((value) => {
+    value.addEventListener('click', async function () {
+        const filteredData = await fetchData(this.getAttribute("data-category"));
+        displayProjects(filteredData);
     });
-  });
-  function display(elem){
-    projects.innerHTML+=
-    `
-    <div class="col-project col-6 col-sm-6 col-md-4 col-lg-3 p-0">
-    <div class="project m-3">
-    <div class="project_image">
-    <a href="${elem.link}" class="text-decoration-none">
-      <img src="assets/${elem.image}" alt="" class="w-100" h-100/>
-      </a>
-      </div>
-      <div class="project_details ">
-        <h3 class="text text-decoration-none my-2 name">${elem.name}</h3>
-        <p class="text text-decoration-none desc">${elem.desc}</p>
-      </div>
-    </div>
-  </div>
-    `
-  }
+});
+
+async function fetchData(name = "all") {
+    var file = `https://raw.githubusercontent.com/Dinesh-kumar-002/showcase/main/script.json?keyword=${name}`;
+    var response = await fetch(file);
+    var data = await response.json();
+
+    if (name === "all") {
+        return data;
+    } else {
+        return data.filter(project => project.keywords.includes(name));
+    }
+}
+
+function displayProjects(data) {
+    projects.innerHTML = '';
+
+    data.forEach((elem) => {
+        projects.innerHTML +=
+            `
+            <div class="col-project col-6 col-sm-6 col-md-4 col-lg-3 p-0">
+                <div class="project m-3">
+                    <div class="project_image">
+                        <a href="${elem.link}" class="text-decoration-none">
+                            <img src="assets/${elem.image}" alt="" class="w-100 h-100"/>
+                        </a>
+                    </div>
+                    <div class="project_details">
+                        <h3 class="text my-2 name">${elem.name}</h3>
+                        <p class="text text-decoration-none desc">${elem.desc}</p>
+                    </div>
+                </div>
+            </div>
+            `;
+    });
+}
+
+fetchData().then(displayProjects);
+
+// jquery 
+$(document).ready(()=>{
+  $('.preloader').hide();
+})
+$(window).load(()=>{
+  console.log(e);
+  $('.preloader').show();
+})

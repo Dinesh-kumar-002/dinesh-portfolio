@@ -17,6 +17,26 @@ body a {
 body .border {
   border-color: rgb(207, 248, 255);
 }
+body .preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(22, 21, 25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  flex-direction: column;
+}
+body .loading {
+  transform: translateY(-30px);
+}
+body .preloader-image {
+  height: 200px;
+  width: 200px;
+}
 
 .hello, .creative {
   color: rgb(207, 248, 255);
@@ -31,6 +51,35 @@ body .border {
   color: rgb(0, 60, 78) !important;
 }
 
+.hire {
+  background-color: greenyellow;
+  color: black !important;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 20px;
+  text-shadow: -1px 1px 20px rgb(0, 0, 0);
+  overflow: hidden;
+}
+
+.arrow-animate {
+  animation: arrow-animate 1s ease-in-out infinite;
+  text-shadow: -1px 1px 20px rgb(0, 0, 0);
+  color: rgb(15, 15, 15);
+  border-radius: 50%;
+  padding: 7px;
+}
+
+@keyframes arrow-animate {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .comment {
   position: fixed;
   bottom: 20px;
@@ -83,7 +132,7 @@ body .border {
 }
 
 .row1 {
-  height: 90vh;
+  height: 97vh;
   background-image: url("assets/wp level2.png");
   background-size: 100 200;
   background-position: bottom right;
@@ -249,7 +298,6 @@ body .border {
   transition-duration: 500ms;
 }
 .pro .desc {
-  color: rgb(0, 106, 138);
   overflow: hidden;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
@@ -276,12 +324,133 @@ body .border {
   color: antiquewhite;
 }
 
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-weight: 800;
+  text-shadow: -1px 1px 1px black;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: rgb(0, 105, 150);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.contain {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.contain::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: rgb(0, 205, 242);
+  border: 4px solid #ffffff;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  position: relative;
+  border: 1px solid rgb(120, 120, 120);
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+  /* Full-width containers */
+  .contain {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  /* Make sure that all arrows are pointing leftwards */
+  .contain::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 18px;
+  }
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
 @media only screen and (min-width: 720px) {
   .portfolio-text {
     position: absolute;
     font-family: "Josefin Sans", sans-serif;
     writing-mode: vertical-lr;
-    font-size: 160px;
+    font-size: 170px;
     opacity: 0.2;
     top: 0;
     left: 0;
