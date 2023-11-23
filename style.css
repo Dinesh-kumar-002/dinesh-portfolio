@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: rgb(0, 21, 27);
+  background-color: rgb(0, 27, 35);
   color: rgb(207, 248, 255);
   font-family: nunito;
 }
@@ -131,6 +131,26 @@ body .preloader-image {
   align-items: center;
 }
 
+.loading-spinner {
+  display: none;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left: 2px solid #0091f1;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .row1 {
   height: 97vh;
   background-image: url("assets/wp level2.png");
@@ -220,6 +240,12 @@ body .preloader-image {
   margin: 8px 1px;
 }
 
+.education {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .cursor-image {
   display: none;
 }
@@ -272,12 +298,12 @@ body .preloader-image {
 }
 
 .heading a:hover {
-  background-color: rgb(0, 133, 182);
+  background-color: rgb(0, 70, 96);
   color: rgb(0, 60, 78);
 }
 
 .skill img {
-  width: 60px;
+  width: 88px;
   margin: 20px;
 }
 .skill img:hover {
@@ -286,16 +312,41 @@ body .preloader-image {
   transition-timing-function: ease-in-out;
 }
 
+input, textarea {
+  outline: none;
+  box-shadow: none;
+  color: white !important;
+  caret-color: white;
+}
+
+.intro-image {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+::-moz-placeholder {
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+}
+
+::placeholder {
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+}
+
 .pro .project {
-  box-shadow: -4px 4px 12px rgb(65, 65, 65);
+  box-shadow: -4px 4px 12px rgb(17, 17, 17);
   border-radius: 10px;
+  border: 1px solid rgb(92, 92, 92);
   padding: 15px;
+  background-color: rgb(0, 4, 5);
 }
 .pro .project:hover {
-  transform: scale(1.1);
-  transition-timing-function: ease-in-out;
+  transition: 250ms;
+  transform: scale(1.03);
   transform-origin: center;
-  transition-duration: 500ms;
 }
 .pro .desc {
   overflow: hidden;
@@ -348,7 +399,6 @@ body .preloader-image {
 .contain {
   padding: 10px 40px;
   position: relative;
-  background-color: inherit;
   width: 50%;
 }
 
@@ -411,6 +461,7 @@ body .preloader-image {
 
 /* The actual content */
 .content {
+  background-color: rgb(0, 4, 5);
   padding: 20px 30px;
   position: relative;
   border: 1px solid rgb(120, 120, 120);
@@ -445,6 +496,12 @@ body .preloader-image {
     left: 0%;
   }
 }
+.contact {
+  background-position: left;
+  background-size: left center;
+  background-image: url("assets/gray-digital-metallic-grunge-triangles-pattern-wallpaper-2560x1080_14.jpg");
+}
+
 @media only screen and (min-width: 720px) {
   .portfolio-text {
     position: absolute;

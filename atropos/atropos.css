@@ -1,24 +1,10 @@
-/**
- * Atropos 2.0.2
- * Touch-friendly 3D parallax hover effects
- * https://atroposjs.com
- *
- * Copyright 2021-2023 
- *
- * Released under the MIT License
- *
- * Released on: July 4, 2023
- */
-
 .atropos {
   position: relative;
   display: block;
   perspective: 1200px;
   transform: translate3d(0, 0, 0);
 }
-.atropos-rotate-touch,
-.atropos-rotate-scroll-x,
-.atropos-rotate-scroll-y {
+.atropos-rotate-touch, .atropos-rotate-scroll-x, .atropos-rotate-scroll-y {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -34,6 +20,7 @@
 .atropos-rotate-touch {
   touch-action: none;
 }
+
 .atropos-scale,
 .atropos-rotate {
   width: 100%;
@@ -42,6 +29,7 @@
   transition-property: transform;
   display: block;
 }
+
 .atropos-shadow,
 .atropos-highlight {
   position: absolute;
@@ -50,6 +38,7 @@
   display: block;
   opacity: 0;
 }
+
 .atropos-shadow {
   z-index: -1;
   background: #000;
@@ -59,6 +48,7 @@
   height: 100%;
   filter: blur(30px);
 }
+
 .atropos-highlight {
   left: -50%;
   top: -50%;
@@ -67,9 +57,11 @@
   background-image: radial-gradient(circle at 50%, rgba(255, 255, 255, 0.25), transparent 50%);
   z-index: 0;
 }
+
 .atropos-rotate {
   position: relative;
 }
+
 .atropos-inner {
   width: 100%;
   height: 100%;
@@ -79,20 +71,22 @@
   transform: translate3d(0, 0, 0);
   display: block;
 }
+
 .atropos-active {
   z-index: 1;
 }
 .atropos-active .atropos-shadow {
   opacity: 1 !important;
 }
-[data-atropos-offset],
-::slotted([data-atropos-offset]) {
+
+[data-atropos-offset] {
   transition-property: transform;
 }
+
 [data-atropos-opacity] {
   transition-property: opacity;
 }
-[data-atropos-offset][data-atropos-opacity],
-::slotted([data-atropos-offset][data-atropos-opacity]) {
+
+[data-atropos-offset][data-atropos-opacity] {
   transition-property: transform, opacity;
-}
+}/*# sourceMappingURL=atropos.css.map */
