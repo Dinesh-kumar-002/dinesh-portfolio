@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Playpen+Sans:wght@100;200;300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Playpen+Sans:wght@100;200;300;400&display=swap');
 
-$light-background:rgb(0, 70, 96);
-$dark-text:rgb(0, 60, 78);
+$light-background:rgb(67, 180, 220);
+$dark-text:rgb(0, 89, 116);
 $light-text:rgb(207, 248, 255);
 $dark-background:rgb(0, 27, 35);
 $default:rgb(0, 4, 5);
@@ -119,6 +119,7 @@ body{
 .about-title,.experience-title,.skills-title,.projects-title,.education-title,.contact-title{
     background-color: $default;
     padding: 10px;
+    color: $light-text !important;
 }
 .whole-nav{
     display: none;
@@ -275,7 +276,9 @@ body{
     left: 0;
 }
 .heading a{
+    background-color: $default;
     box-shadow: -1px 1px 3px black;
+    color: $light-text !important ;
 }
  .heading a:hover{
     background-color: $light-background;
@@ -307,11 +310,19 @@ input,textarea{
 ::placeholder{
     color: rgb(255, 255, 255);
     font-weight: 800;
-}   
+} 
+.role{
+    a:last-child{
+        background-color: $default;
+        color: $light-text !important;
+        padding: 10px !important;
+    }
+}  
 .pro{
     .project{
         box-shadow: -4px 4px 12px rgb(17, 17, 17);
         border-radius: 10px;
+        color: $light-text;
         border: 1px solid rgb(92, 92, 92);
         padding: 15px;
         background-color: $default;
@@ -443,6 +454,9 @@ input,textarea{
     position: relative;
     border: 1px solid rgb(120, 120, 120);
     border-radius: 6px;
+    h1{
+        color: $light-text;
+    }
   }
   
   /* Media queries - Responsive timeline on screens less than 600px wide */

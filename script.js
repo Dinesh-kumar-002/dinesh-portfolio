@@ -33,42 +33,41 @@ var typed = new Typed("#element1", {
   cursorChar: "",
 });
 
-// var dark_background = "rgb(0, 78, 99)";
-// var light_text = "rgb(207, 248, 255)";
-// var light_background = "rgb(217, 245, 255)";
-// var dark_text = "rgb(0, 60, 78)";
-
-// const body = document.querySelector("body");
+var dark_background = "rgb(0, 78, 99)";
+var light_text = "rgb(207, 248, 255)";
+var light_background = "rgb(67, 180, 220)";
+var dark_text = "rgb(0, 60, 78)";
 const whole_nav = document.querySelector(".whole-nav");
-// const a = document.querySelectorAll("a");
-// const border = document.querySelectorAll(".border");
-// const bulb = document.querySelector(".bulb");
-// bulb.addEventListener("click", function () {
-//   const i = bulb.querySelector("i");
-//   if (i.getAttribute("class").includes("fa-regular")) {
-//     console.log(i.getAttribute("class"));
-//     i.setAttribute("class", " fa-lightbulb fa-solid");
-//     body.style.backgroundColor = light_background;
-//     body.style.color = dark_text;
-//     a.forEach((value) => {
-//       value.style.color = dark_text;
-//     });
-//     border.forEach((value) => {
-//       value.style.borderColor = dark_text;
-//     });
-//   } else if (i.getAttribute("class").includes("fa-solid")) {
-//     i.setAttribute("class", " fa-lightbulb fa-regular");
-//     console.log(i.getAttribute("class"));
-//     body.style.backgroundColor = dark_background;
-//     body.style.color = light_text;
-//     a.forEach((value) => {
-//       value.style.color = light_text;
-//     });
-//     border.forEach((value) => {
-//       value.style.borderColor = light_text;
-//     });
-//   }
-// });
+const body = document.querySelector("body");
+const a = document.querySelectorAll("a");
+const border = document.querySelectorAll(".border");
+const bulb = document.querySelector(".bulb");
+bulb.addEventListener("click", function () {
+  const i = bulb.querySelector("i");
+  if (i.getAttribute("class").includes("fa-regular")) {
+    console.log(i.getAttribute("class"));
+    i.setAttribute("class", " fa-lightbulb fa-solid");
+    body.style.backgroundColor = light_background;
+    body.style.color = dark_text;
+    a.forEach((value) => {
+      value.style.color = dark_text;
+    });
+    border.forEach((value) => {
+      value.style.borderColor = dark_text;
+    });
+  } else if (i.getAttribute("class").includes("fa-solid")) {
+    i.setAttribute("class", " fa-lightbulb fa-regular");
+    console.log(i.getAttribute("class"));
+    body.style.backgroundColor = dark_background;
+    body.style.color = light_text;
+    a.forEach((value) => {
+      value.style.color = light_text;
+    });
+    border.forEach((value) => {
+      value.style.borderColor = light_text;
+    });
+  }
+});
 
 window.addEventListener("scroll", () => {
   var dinesh_glass = document.querySelector(".dinesh-glass");
