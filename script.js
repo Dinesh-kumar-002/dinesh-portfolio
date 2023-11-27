@@ -33,7 +33,7 @@ var typed = new Typed("#element1", {
   cursorChar: "",
 });
 
-var dark_background = "rgb(0, 78, 99)";
+var dark_background = "rgb(0, 27, 35)";
 var light_text = "rgb(207, 248, 255)";
 var light_background = "rgb(67, 180, 220)";
 var dark_text = "rgb(0, 60, 78)";
