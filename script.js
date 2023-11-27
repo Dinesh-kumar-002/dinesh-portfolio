@@ -129,8 +129,8 @@ function displayProjects(data) {
                         </a>
                     </div>
                     <div class="project_details">
-                        <h3 class="text my-2 name">${elem.name}</h3>
-                        <p class="text text-decoration-none desc">${elem.desc}</p>
+                        <h3 class="text my-3 mt-4 name">${elem.name}</h3>
+                        <p class="text text-decoration-none text-secondary desc">${elem.desc}</p>
                     </div>
                 </div>
             </div>
